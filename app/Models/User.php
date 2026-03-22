@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'license_number',
+        'preferred_hub_id',
+        'can_sparring',
     ];
 
     /**
@@ -44,5 +47,42 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // RELATIONS
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    public function attributions()
+    {
+        return $this->belongsToMany(Attribution::class);
+    }
+
+    public function availabilities()
+    {
+        return $this->hasMany(Availability::class);
+    }
+
+    public function preferredHub()
+    {
+        return $this->belongsTo(Branch::class, 'preferred_hub_id');
+    }
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class, 'student_id');
+    }
+
+    public function bookingsAsInstructor()
+    {
+        return $this->hasMany(Booking::class, 'instructor_id');
+    }
+
+    public function bookingParticipations()
+    {
+        return $this->hasMany(BookingParticipant::class, 'student_id');
     }
 }
