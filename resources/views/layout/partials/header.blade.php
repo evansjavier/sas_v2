@@ -136,7 +136,7 @@
                                         class="ti ti-settings me-2"></i>Settings</a>
                                 <hr class="m-0">
                                 <a class="dropdown-item d-inline-flex align-items-center p-2"
-                                    href="{{ url('login') }}"><i class="ti ti-login me-2"></i>Logout</a>
+                                    href="{{ url('signout') }}"><i class="ti ti-login me-2"></i>Logout</a>
                             </div>
                         </div>
                     </div>

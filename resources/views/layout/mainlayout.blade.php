@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-@if(!Route::is(['layout-dark']))  
+@if(!Route::is(['layout-dark']))
 <html lang="en">
 @endif
- @if(Route::is(['layout-dark']))   
+ @if(Route::is(['layout-dark']))
 
 <html lang="en" data-theme="dark">
- @endif   
+ @endif
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta name="description" content="Preskool - Bootstrap Admin Template">
+    <meta name="description" content="{{ config('app.name', 'Laravel') }} - Admin">
     <meta name="keywords" content="admin, estimates, bootstrap, business, html5, responsive, Projects">
-    <meta name="author" content="Dreams technologies - Bootstrap Admin Template">
+    <meta name="author" content="{{ config('app.name', 'Laravel') }}">
     <meta name="robots" content="noindex, nofollow">
-    <title>Preskool Admin Template</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     @include('layout.partials.head')
 </head>
