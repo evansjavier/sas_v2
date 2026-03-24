@@ -124,8 +124,8 @@
                                         <img src="build/img/profiles/avatar-27.jpg" alt="img">
                                     </span>
                                     <div>
-                                        <h6 class="">Kevin Larry</h6>
-                                        <p class="text-primary mb-0">Administrator</p>
+                                        <h6 class="">{{ Auth::user()->name }}</h6>
+                                        <p class="text-primary mb-0">{{ ucfirst(Auth::user()->roles->pluck('name')->join(', ')) }}</p>
                                     </div>
                                 </div>
                                 <hr class="m-0">
