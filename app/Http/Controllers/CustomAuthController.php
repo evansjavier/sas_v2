@@ -13,10 +13,10 @@ class CustomAuthController extends Controller
 
     public function index()
     {
-        
+
         return view('login');
-    }  
-      
+    }
+
 
     public function customLogin(Request $request)
     {
@@ -30,10 +30,7 @@ class CustomAuthController extends Controller
         ]
     );
         $credentials = $request->only('email', 'password');
-           if ($credentials['email']=='admin@example.com' && $credentials['password']=='123456'){
-        return redirect()->intended('index')
-                        ->withSuccess('Signed in');
-        }
+
         if (Auth::attempt($credentials)) {
             return redirect()->intended('index')
                         ->withSuccess('Signed in');
@@ -45,10 +42,10 @@ class CustomAuthController extends Controller
     {
         return view('register');
     }
-      
+
 
     public function customRegistration(Request $request)
-    {  
+    {
         $request->validate([
             'name' => 'required|min:5|max:30',
             'email' => 'required|email|unique:users',
@@ -64,10 +61,10 @@ class CustomAuthController extends Controller
 
         ]
     );
-           
+
         $data = $request->all();
         $check = $this->create($data);
-         
+
         return redirect("login")->withSuccess('You have signed-in');
     }
 
@@ -79,23 +76,23 @@ class CustomAuthController extends Controller
         'email' => $data['email'],
         'password' => Hash::make($data['password'])
       ]);
-    }    
-    
+    }
+
 
     public function dashboard()
     {
         if(Auth::check()){
             return view('index');
         }
-  
+
         return redirect("login")->withSuccess('You are not allowed to access');
     }
-    
+
 
     public function signOut() {
         Session::flush();
         Auth::logout();
-  
+
         return Redirect('login');
     }
 }
