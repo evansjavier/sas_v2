@@ -6,68 +6,78 @@
         <div class="content">
 
             <!-- Page Header -->
-            <div class="d-md-flex d-block align-items-center justify-content-between mb-3">
-                <div class="my-auto mb-2">
-                    <h3 class="page-title mb-1">Admin Dashboard</h3>
-                     <nav>
-                           <ol class="breadcrumb mb-0">
-                              <li class="breadcrumb-item">
-                                <a href="javascript:void(0);">Dashboard</a>
-                              </li>
-                              <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
-                        </ol>
-                      </nav>
-                </div>
-                <div class="d-flex my-xl-auto right-content align-items-center flex-wrap">                 
-                    <div class="mb-2">
-                        <a href="{{url('add-student')}}" class="btn btn-primary d-flex align-items-center me-3"><i
-                            class="ti ti-square-rounded-plus me-2"></i>Add New Student</a>
-                      </div>
-                      <div class="mb-2">
-                        <a href="{{url('collect-fees')}}" class="btn btn-light d-flex align-items-center">Fees Details</a>
-                      </div>
-                </div>
-            </div>
+				<div class="d-md-flex d-block align-items-center justify-content-between mb-3">
+					<div class="my-auto mb-2">
+						<h3 class="page-title mb-1">Admin Dashboard</h3>
+						<nav>
+							<ol class="breadcrumb mb-0">
+								<li class="breadcrumb-item">
+									<a href="index.html">Dashboard</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="d-flex my-xl-auto right-content align-items-center flex-wrap">
+						<div class="mb-2">
+							<a href="add-student.html" class="btn btn-primary d-flex align-items-center me-3"><i
+									class="ti ti-square-rounded-plus me-2"></i>Add New Student</a>
+						</div>
+												<div class="mb-2">
+							<a href="add-student.html" class="btn btn-primary d-flex align-items-center me-3"><i
+									class="ti ti-square-rounded-plus me-2"></i>Add New Instructor</a>
+						</div>
+
+						<div class="mb-2">
+							<a href="collect-fees.html" class="btn btn-light d-flex align-items-center">Sim Report</a>
+						</div>
+					</div>
+				</div>
             <!-- /Page Header -->
 
             <div class="row">
                 <div class="col-md-12">
                     <div class="alert-message">
-                        <div class="alert alert-success rounded-pill d-flex align-items-center justify-content-between border-success mb-4" role="alert">
+                        <div class="alert alert-success  d-flex align-items-center justify-content-between border-success mb-4"
+                            role="alert">
                             <div class="d-flex align-items-center">
-                                <span class="me-1 avatar avatar-sm flex-shrink-0"><img src="{{URL::asset('build/img/profiles/avatar-27.jpg')}}" alt="" class="img-fluid rounded-circle"></span>
-                                <p>Fahed III,C has paid Fees for the <strong class="mx-1">“Term1”</strong></p>
+                                <p>As you are aware, according to the interpretation applied by the Spanish Competent Authority and in line with Regulation (EU) No 1178/2011, an SFI was not permitted to provide instruction during the so-called ninth session of a course including ZFTT, i.e. the ZFTT session.
+
+                                    Following a query raised to EASA by a Competent Authority, EASA has clarified that any type of instructor may provide instruction during this session.
+
+                                    Therefore, it is hereby informed that SFI, TRI, TRI LT, TRI/r LIFUS and TRI/r LT LIFUS instructors are also authorised to provide instruction during said session.
+
+                                    <strong class="mx-1">“Term1”</strong>
+                                </p>
                             </div>
-                            <button type="button" class="btn-close p-0" data-bs-dismiss="alert" aria-label="Close"><span><i class="ti ti-x"></i></span></button>
+                            <button type="button" class="btn-close p-0" data-bs-dismiss="alert"
+                                aria-label="Close"><span><i class="ti ti-x"></i></span></button>
                         </div>
                     </div>
-    
+
                     <!-- Dashboard Content -->
-                    <div class="card bg-dark">
-                        <div class="overlay-img">
-                            <img src="{{URL::asset('build/img/bg/shape-04.png')}}" alt="img" class="img-fluid shape-01">
-                            <img src="{{URL::asset('build/img/bg/shape-01.png')}}" alt="img" class="img-fluid shape-02">
-                            <img src="{{URL::asset('build/img/bg/shape-02.png')}}" alt="img" class="img-fluid shape-03">
-                            <img src="{{URL::asset('build/img/bg/shape-03.png')}}" alt="img" class="img-fluid shape-04">
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-xl-center justify-content-xl-between flex-xl-row flex-column">
-                                <div class="mb-3 mb-xl-0">
-                                    <div class="d-flex align-items-center flex-wrap mb-2">
-                                        <h1 class="text-white me-2">Welcome Back, Mr. Herald</h1>
-                                        <a href="{{url('profile')}}" class="avatar avatar-sm img-rounded bg-gray-800 dark-hover"><i class="ti ti-edit text-white"></i></a>
-                                    </div>
-                                    <p class="text-white">Have a Good day at work</p>
-                                </div>
-                                <p class="text-white"><i class="ti ti-refresh me-1"></i>Updated Recently on 15 Jun 2024</p>
+                    <div class="card" style="background-color:#0B0930; color:white; border:none; border-radius:12px;">
+                        <div class="card-body d-flex align-items-center justify-content-between">
+
+                            <!-- IZQUIERDA (texto) -->
+                            <div>
+                            <h1 class="mb-2" style="color: aliceblue;">Welcome Back, {{ Auth::user()->name ?? 'User'    }}</h1>
+                            <p>Have a great day! ✈️</p>
                             </div>
+
+                            <!-- DERECHA (logo) -->
+                            <div>
+                            <img src="{{URL::asset('build/img/general/logo_sas_blanco.png')}}" alt="logo" style="height:130px;">
+                            </div>
+
                         </div>
                     </div>
                     <!-- /Dashboard Content -->
-                    
+
                 </div>
             </div>
 
+            <!-- Totals metrics -->
             <div class="row">
 
                 <!-- Total Students -->
@@ -80,16 +90,15 @@
                                 </div>
                                 <div class="overflow-hidden flex-fill">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="counter">3654</h2>
-                                        <span class="badge bg-danger">1.2%</span>
+                                        <h2 class="counter">54</h2>
                                     </div>
                                     <p>Total Students</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                <p class="mb-0">Active : <span class="text-dark fw-semibold">3643</span></p>
+                                <p class="mb-0">Active : <span class="text-dark fw-semibold">45</span></p>
                                 <span class="text-light">|</span>
-                                <p>Inactive : <span class="text-dark fw-semibold">11</span></p>
+                                <p>Inactive : <span class="text-dark fw-semibold">10</span></p>
                             </div>
                         </div>
                     </div>
@@ -106,16 +115,15 @@
                                 </div>
                                 <div class="overflow-hidden flex-fill">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="counter">284</h2>
-                                        <span class="badge bg-pending">1.2%</span>
+                                        <h2 class="counter">28</h2>
                                     </div>
-                                    <p class="text-gray">Total Teachers</p>
+                                    <p>Total Instructors</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                <p class="mb-0">Active : <span class="text-dark fw-semibold">254</span></p>
+                                <p class="mb-0">Active : <span class="text-dark fw-semibold">20</span></p>
                                 <span class="text-light">|</span>
-                                <p>Inactive : <span class="text-dark fw-semibold">30</span></p>
+                                <p>Inactive : <span class="text-dark fw-semibold">8</span></p>
                             </div>
                         </div>
                     </div>
@@ -132,16 +140,15 @@
                                 </div>
                                 <div class="overflow-hidden flex-fill">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="counter">162</h2>
-                                        <span class="badge bg-warning">1.2%</span>
+                                        <h2 class="counter">10</h2>
                                     </div>
-                                    <p class="text-gray">Total Staff</p>
+                                    <p>Total Staff</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                <p class="mb-0">Active : <span class="text-dark fw-semibold">161</span></p>
+                                <p class="mb-0">Active : <span class="text-dark fw-semibold">16</span></p>
                                 <span class="text-light">|</span>
-                                <p>Inactive : <span class="text-dark fw-semibold">02</span></p>
+                                <p>Inactive : <span class="text-dark fw-semibold">0</span></p>
                             </div>
                         </div>
                     </div>
@@ -158,16 +165,15 @@
                                 </div>
                                 <div class="overflow-hidden flex-fill">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="counter">82</h2>
-                                        <span class="badge bg-success">1.2%</span>
+                                        <h2 class="counter">12</h2>
                                     </div>
-                                    <p class="text-gray">Total Subjects</p>
+                                    <p>Total Courses</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                <p class="mb-0">Active : <span class="text-dark fw-semibold">81</span></p>
+                                <p class="mb-0">Active : <span class="text-dark fw-semibold">11</span></p>
                                 <span class="text-light">|</span>
-                                <p>Inactive : <span class="text-dark fw-semibold">01</span></p>
+                                <p>Inactive : <span class="text-dark fw-semibold">2</span></p>
                             </div>
                         </div>
                     </div>
@@ -175,6 +181,7 @@
                 <!-- /Total Subjects -->
 
             </div>
+            <!-- /Totals metrics -->
 
             <div class="row">
 
@@ -218,7 +225,7 @@
                                     </div>
                                 </div>
                                 <!-- /Event Item -->
-    
+
                                 <!-- Event Item -->
                                 <div class="border-start border-info border-3 shadow-sm p-3 mb-3">
                                     <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
@@ -271,16 +278,16 @@
                                     </div>
                                 </div>
                                 <!-- /Event Item -->
-    
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- /Schedules -->
-                
+
                 <!-- Attendance -->
                 <div class="col-xxl-4 col-xl-6 col-md-12 d-flex flex-column">
-                            
+
                     <div class="card">
                         <div class="card-header d-flex align-items-center justify-content-between">
                             <h4 class="card-title">Attendance</h4>
@@ -430,7 +437,7 @@
                             <div class="bg-success-800 p-3 br-5 text-center flex-fill mb-4 pb-0  owl-height bg-01">
                                 <div class="owl-carousel student-slider h-100">
                                     <div class="item h-100">
-                                        <div class="d-flex justify-content-between flex-column h-100">									
+                                        <div class="d-flex justify-content-between flex-column h-100">
                                             <div>
                                                 <h5 class="mb-3 text-white">Best Performer</h5>
                                                 <h4 class="mb-1 text-white">Rubell</h4>
@@ -440,7 +447,7 @@
                                         </div>
                                     </div>
                                     <div class="item h-100">
-                                        <div class="d-flex justify-content-between flex-column h-100">									
+                                        <div class="d-flex justify-content-between flex-column h-100">
                                             <div>
                                                 <h5 class="mb-3 text-white">Best Performer</h5>
                                                 <h4 class="mb-1 text-white">George Odell</h4>
@@ -489,7 +496,7 @@
                 <!-- /Attendance -->
 
                 <div class="col-xxl-4 col-md-12 d-flex flex-column">
-                    
+
                     <!-- Quick Links -->
                     <div class="card flex-fill">
                         <div class="card-header d-flex align-items-center justify-content-between">
@@ -529,7 +536,7 @@
                                     <a href="{{url('student-attendance')}}" class="d-block bg-warning-transparent ronded p-2 text-center mb-3 class-hover">
                                         <div class="avatar avatar-lg border p-1 border-warning rounded-circle mb-2">
                                             <span class="d-inline-flex align-items-center justify-content-center w-100 h-100 bg-warning rounded-circle"><i class="ti ti-calendar-share"></i></span>
-                                        </div>	
+                                        </div>
                                         <p class="text-dark">Attendance</p>
                                     </a>
                                     <a href="{{url('attendance-report')}}" class="d-block bg-skyblue-transparent ronded p-2 text-center mb-3 class-hover">
@@ -585,7 +592,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>	
+                    </div>
                     <!-- /Class Routine -->
 
                     <!-- Class Wise Performance -->
@@ -642,7 +649,7 @@
                     </div>
                     <!-- /Class Wise Performance -->
 
-                </div>	
+                </div>
 
             </div>
 
@@ -994,9 +1001,9 @@
                             </div>
                         </div>
                     </div>
-                </div>	
-                <!-- /Fees Collection -->		
-                    
+                </div>
+                <!-- /Fees Collection -->
+
             </div>
 
             <div class="row">
@@ -1050,7 +1057,7 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 20%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -1062,9 +1069,9 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-secondary rounded" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
-                                    </div>										
+                                    </div>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row align-items-center">
@@ -1074,7 +1081,7 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-info rounded" role="progressbar" style="width: 40%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -1086,7 +1093,7 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-success rounded" role="progressbar" style="width: 50%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -1098,7 +1105,7 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-warning rounded" role="progressbar" style="width: 70%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -1110,7 +1117,7 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-danger rounded" role="progressbar" style="width: 80%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -1122,7 +1129,7 @@
                                         <div class="col-sm-8">
                                             <div class="progress progress-xs flex-grow-1">
                                                 <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 85%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>												
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -1202,7 +1209,7 @@
                     </div>
 
                 </div>
-                <!-- /Student Activity -->					
+                <!-- /Student Activity -->
 
                 <!-- Todo -->
                 <div class="col-xxl-4 col-xl-12 d-flex">
@@ -1309,12 +1316,12 @@
                     </div>
                 </div>
                 <!-- /Todo -->
-                    
+
             </div>
         </div>
 
     </div>
     <!-- /Page Wrapper -->
-    @component('components.modal-popup')        
+    @component('components.modal-popup')
     @endcomponent
 @endsection

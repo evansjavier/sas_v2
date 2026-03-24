@@ -1,6 +1,9 @@
 <?php $page = 'login'; ?>
 @extends('layout.mainlayout')
 @section('content')
+<?php $page = 'login'; ?>
+@extends('layout.mainlayout')
+@section('content')
 <div class="container-fuild">
     <div class="w-100 overflow-hidden position-relative flex-wrap d-block vh-100">
         <div class="row">
@@ -10,50 +13,37 @@
                         <img src="{{URL::asset('build/img/authentication/authentication-02.jpg')}}" alt="Img">
                     </div>
                     <div class="authen-overlay-item  w-100 p-4">
-                        <h4 class="text-white mb-3">What's New on Preskool !!!</h4>
+                        <h4 class="mb-3" style="color: #E5D8C0;">Elevating Standars, Inspiring Pilots</h4>
                         <div
                             class="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                             <div>
-                                <h6>Summer Vacation Holiday Homework</h6>
-                                <p class="mb-0 text-truncate">The school will remain closed from April 20th to June...</p>
+                                <h6>Simplicity</h6>
+                                <p class="mb-0 text-truncate">We aim to simplify all aspects of training.</p>
                             </div>
-                            <a href="javascript:void(0);"><i class="ti ti-chevrons-right"></i></a>
                         </div>
                         <div
                             class="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                             <div>
-                                <h6>New Academic Session Admission Start(2024-25)</h6>
-                                <p class="mb-0 text-truncate">An academic term is a portion of an academic year, the time ....
+                                <h6>Comprehensive Scope</h6>
+                                <p class="mb-0 text-truncate">Our platform covers everything related to training.
                                 </p>
                             </div>
-                            <a href="javascript:void(0);"><i class="ti ti-chevrons-right"></i></a>
                         </div>
                         <div
                             class="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                             <div>
-                                <h6>Date sheet Final Exam Nursery to Sr.Kg</h6>
-                                <p class="mb-0 text-truncate">Dear Parents, As the final examination for the session 2024-25
-                                    is ...</p>
+                                <h6>Efficiency</h6>
+                                <p class="mb-0 text-truncate">The process is designed to be straightforward and user-friendly.</p>
                             </div>
-                            <a href="javascript:void(0);"><i class="ti ti-chevrons-right"></i></a>
+
                         </div>
                         <div
                             class="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                             <div>
-                                <h6>Annual Day Function</h6>
-                                <p class="mb-0 text-truncate">Annual functions provide a platform for students to showcase
-                                    their...</p>
+                                <h6>Precision Learning</h6>
+                                <p class="mb-0 text-truncate">Structured training designed to mirror real-world aviation scenarios.</p>
                             </div>
-                            <a href="javascript:void(0);"><i class="ti ti-chevrons-right"></i></a>
-                        </div>
-                        <div
-                            class="d-flex align-items-center flex-row mb-0 justify-content-between p-3 br-5 gap-3 card">
-                            <div>
-                                <h6>Summer Vacation Holiday Homework</h6>
-                                <p class="mb-0 text-truncate">The school will remain closed from April 20th to June 15th for
-                                    summer...</p>
-                            </div>
-                            <a href="javascript:void(0);"><i class="ti ti-chevrons-right"></i></a>
+
                         </div>
 
                     </div>
@@ -66,45 +56,14 @@
                             @csrf
                             <div>
                                 <div class=" mx-auto mb-5 text-center">
-                                    <img src="{{URL::asset('build/img/authentication/authentication-logo.svg')}}"
-                                        class="img-fluid" alt="Logo">
+                                    <img src="{{URL::asset('build/img/general/logo_sas.png')}}"
+                                        class="img-fluid" alt="Logo" style="width: 200px;">
                                 </div>
                                 <div class="card">
                                     <div class="card-body p-4">
                                         <div class=" mb-4">
-                                            <h2 class="mb-2">Welcome</h2>
+                                            <h2 class="mb-2">Welcome to Simple Aviation Solutions</h2>
                                             <p class="mb-0">Please enter your details to sign in</p>
-                                        </div>
-                                        <div class="mt-4">
-                                            <div
-                                                class="d-flex align-items-center justify-content-center flex-wrap">
-                                                <div class="text-center me-2 flex-fill">
-                                                    <a href="javascript:void(0);"
-                                                        class="bg-primary br-10 p-2 btn btn-primary  d-flex align-items-center justify-content-center">
-                                                        <img class="img-fluid m-1"
-                                                            src="{{URL::asset('build/img/icons/facebook-logo.svg')}}"
-                                                            alt="Facebook">
-                                                    </a>
-                                                </div>
-                                                <div class="text-center me-2 flex-fill">
-                                                    <a href="javascript:void(0);"
-                                                        class=" br-10 p-2 btn btn-outline-light  d-flex align-items-center justify-content-center">
-                                                        <img class="img-fluid  m-1"
-                                                            src="{{URL::asset('build/img/icons/google-logo.svg')}}"
-                                                            alt="Facebook">
-                                                    </a>
-                                                </div>
-                                                <div class="text-center flex-fill">
-                                                    <a href="javascript:void(0);"
-                                                        class="bg-dark br-10 p-2 btn btn-dark d-flex align-items-center justify-content-center">
-                                                        <img class="img-fluid  m-1"
-                                                            src="{{URL::asset('build/img/icons/apple-logo.svg')}}" alt="Apple">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="login-or">
-                                            <span class="span-or">Or</span>
                                         </div>
                                         <div class="mb-3 ">
                                             <label class="form-label">Email Address</label>
@@ -112,7 +71,7 @@
                                                 <span class="input-icon-addon">
                                                     <i class="ti ti-mail"></i>
                                                 </span>
-                                                <input type="text" id="Email" name="email" value="admin@example.com" class="form-control">
+                                                <input type="text" id="Email" name="email" value="{{ old('email') }}" class="form-control">
                                                 <div class="text-danger pt-2">
                                                     @error('0')
                                                         {{$message}}
@@ -124,7 +83,7 @@
                                             </div>
                                             <label class="form-label">Password</label>
                                             <div class="pass-group">
-                                                <input type="password"  id="password" name="password" value="123456" class="pass-input form-control">
+                                                <input type="password"  id="password" name="password" value="{{ old('password') }}" class="pass-input form-control">
                                                 <span class="ti toggle-password ti-eye-off"></span>
                                                 <div class="text-danger pt-2">
                                                     @error('0')
@@ -136,7 +95,7 @@
                                                 </div>
                                             </div>
                                         </div>
-    
+
                                         <div class="form-wrap form-wrap-checkbox mb-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="form-check form-check-md mb-0">
@@ -152,15 +111,10 @@
                                         <div class="mb-3">
                                             <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                         </div>
-                                        <div class="text-center">
-                                            <h6 class="fw-normal text-dark mb-0">Don’t have an account? <a
-                                                    href="{{url('register')}}" class="hover-a "> Create Account</a>
-                                            </h6>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="mt-5 text-center">
-                                    <p class="mb-0 ">Copyright &copy; 2024 - Preskool</p>
+                                    <p class="mb-0 ">Copyright &copy; {{ date('Y') }} - Simple Aviation Solutions</p>
                                 </div>
                             </div>
                         </form>

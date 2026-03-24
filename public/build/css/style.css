@@ -1773,7 +1773,7 @@ authentication
   line-height: 0;
 }
 .header .header-left .logo img {
-  width: 130px;
+  width: 105px;
 }
 @media (max-width: 991.98px) {
   .header .header-left .logo {
@@ -1781,7 +1781,7 @@ authentication
     width: 100%;
   }
   .header .header-left .logo img {
-    width: 140px;
+    width: 110px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1790,7 +1790,7 @@ authentication
     width: 100%;
   }
   .header .header-left .dark-logo img {
-    width: 140px;
+    width: 110px;
   }
 }
 .header .header-left .logo-small {
@@ -4994,8 +4994,8 @@ authentication
 /****** Utils ******/
 .btn-primary {
   color: #FFF;
-  background-color: #3D5EE1;
-  border-color: #3D5EE1;
+  background-color: #0B0930;
+  border-color: #E5D8C0;
   font-size: 14px;
   font-size: 14px;
 }
@@ -5036,8 +5036,8 @@ button:focus {
   font-size: 0.75rem;
 }
 .btn.btn-primary {
-  background-color: #3D5EE1;
-  border: 1px solid #3D5EE1;
+  background-color: #0B0930;
+  border: 1px solid #B59C6A;
   color: #FFF;
 }
 .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary.focus, .btn.btn-primary:active, .btn.btn-primary.active {
@@ -5156,8 +5156,8 @@ button:focus {
   color: #FFF;
 }
 .btn.btn-primary {
-  background-color: #506EE4;
-  border: 1px solid #506EE4;
+  background-color: #0B0930;
+  border: 1px solid #0B0930;
   color: #FFF;
 }
 .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary.focus, .btn.btn-primary:active, .btn.btn-primary.active {
@@ -23836,7 +23836,7 @@ authentication
 }
 .login-background::before {
   content: "";
-  background: rgba(75, 111, 255, 0.6);
+  background: #0B0930;
   width: 100%;
   height: 100%;
   position: absolute;
