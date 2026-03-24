@@ -90,7 +90,7 @@
                                                 <div class="avatar avatar-lg rounded-circle mb-2">
                                                     <span
                                                         class="d-inline-flex align-items-center justify-content-center w-100 h-100 bg-warning rounded-circle"><i
-                                                            class="ti ti-users-group"></i></span>
+                                                            class="ti ti-book"></i></span>
                                                 </div>
                                                 <p class="text-dark">View Courses</p>
                                             </a>
