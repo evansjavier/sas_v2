@@ -107,13 +107,6 @@
                             </form>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center bg-white border rounded-2 p-1 mb-3 me-2">
-                        <a href="{{ url('students') }}" class="active btn btn-icon btn-sm me-1 primary-hover"><i
-                                class="ti ti-list-tree"></i></a>
-                        <a href="{{ url('student-grid') }}" class="btn btn-icon btn-sm bg-light primary-hover"><i
-                                class="ti ti-grid-dots"></i></a>
-                    </div>
-
                 </div>
             </div>
             <div class="card-body p-0 py-3">

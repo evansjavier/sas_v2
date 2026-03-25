@@ -79,12 +79,7 @@
 								</form>
 							</div>
 						</div>
-						<div class="d-flex align-items-center bg-white border rounded-2 p-1 mb-3 me-2">
-							<a href="{{url('teachers')}}" class=" btn btn-icon btn-sm me-1 bg-light primary-hover"><i
-								class="ti ti-list-tree"></i></a>
-							<a href="{{url('teacher-grid')}}" class=" active btn btn-icon btn-sm  primary-hover"><i
-								class="ti ti-grid-dots"></i></a>
-						  </div>
+
 						<div class="dropdown mb-3">
 							<a href="javascript:void(0);" class="btn btn-outline-light bg-white dropdown-toggle"
 								data-bs-toggle="dropdown"><i class="ti ti-sort-ascending-2 me-2"></i>Sort by A-Z </a>
