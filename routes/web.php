@@ -9,6 +9,10 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('register', [CustomAuthController::class, 'register'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 
+Route::get('/forgot-password', function () {
+        return view('forgot-password');
+    })->name('forgot-password');
+
 Route::middleware('auth')->group(function () {
     Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
     Route::get('index', [CustomAuthController::class, 'dashboard']);
@@ -890,9 +894,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/register-3', function () {
         return view('register-3');
     })->name('register-3');
-    Route::get('/forgot-password', function () {
-        return view('forgot-password');
-    })->name('forgot-password');
+
     Route::get('/forgot-password-2', function () {
         return view('forgot-password-2');
     })->name('forgot-password-2');
