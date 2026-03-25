@@ -1,9 +1,6 @@
 <?php $page = 'login'; ?>
 @extends('layout.mainlayout')
 @section('content')
-<?php $page = 'login'; ?>
-@extends('layout.mainlayout')
-@section('content')
 <div class="container-fuild">
     <div class="w-100 overflow-hidden position-relative flex-wrap d-block vh-100">
         <div class="row">
@@ -127,4 +124,20 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.querySelector('.pass-input');
+
+        console.log('Toggle Password Element:', togglePassword);
+        if (togglePassword && passwordInput) {
+            togglePassword.addEventListener('click', function () {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('ti-eye');
+                this.classList.toggle('ti-eye-off');
+            });
+        }
+    });
+</script>
 @endsection
