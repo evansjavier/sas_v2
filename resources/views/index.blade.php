@@ -36,24 +36,8 @@
             <!-- /Page Header -->
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="alert-message">
-                        <div class="alert alert-success  d-flex align-items-center justify-content-between border-success mb-4"
-                            role="alert">
-                            <div class="d-flex align-items-center">
-                                <p>As you are aware, according to the interpretation applied by the Spanish Competent Authority and in line with Regulation (EU) No 1178/2011, an SFI was not permitted to provide instruction during the so-called ninth session of a course including ZFTT, i.e. the ZFTT session.
+                <div class="col-md-12">'
 
-                                    Following a query raised to EASA by a Competent Authority, EASA has clarified that any type of instructor may provide instruction during this session.
-
-                                    Therefore, it is hereby informed that SFI, TRI, TRI LT, TRI/r LIFUS and TRI/r LT LIFUS instructors are also authorised to provide instruction during said session.
-
-                                    <strong class="mx-1">“Term1”</strong>
-                                </p>
-                            </div>
-                            <button type="button" class="btn-close p-0" data-bs-dismiss="alert"
-                                aria-label="Close"><span><i class="ti ti-x"></i></span></button>
-                        </div>
-                    </div>
 
                     <!-- Dashboard Content -->
                     <div class="card" style="background-color:#0B0930; color:white; border:none; border-radius:12px;">
@@ -74,6 +58,25 @@
                     </div>
                     <!-- /Dashboard Content -->
 
+                    {{-- Alert Message --}}
+                    <div class="alert-message">
+                        <div class="alert alert-success  d-flex align-items-center justify-content-between border-success mb-4"
+                            role="alert">
+                            <div class="d-flex align-items-center">
+                                <p>As you are aware, according to the interpretation applied by the Spanish Competent Authority and in line with Regulation (EU) No 1178/2011, an SFI was not permitted to provide instruction during the so-called ninth session of a course including ZFTT, i.e. the ZFTT session.
+
+                                    Following a query raised to EASA by a Competent Authority, EASA has clarified that any type of instructor may provide instruction during this session.
+
+                                    Therefore, it is hereby informed that SFI, TRI, TRI LT, TRI/r LIFUS and TRI/r LT LIFUS instructors are also authorised to provide instruction during said session.
+
+                                    <strong class="mx-1">“Term1”</strong>
+                                </p>
+                            </div>
+                            <button type="button" class="btn-close p-0" data-bs-dismiss="alert"
+                                aria-label="Close"><span><i class="ti ti-x"></i></span></button>
+                        </div>
+                    </div>
+                    {{-- /Alert Message --}}
                 </div>
             </div>
 
