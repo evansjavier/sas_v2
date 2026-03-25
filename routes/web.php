@@ -20,6 +20,12 @@ Route::middleware('auth')->group(function () {
         return view('index');
     })->name('index');
 
+    Route::get('/students', function () {
+        return view('students');
+    })->name('students');
+
+    if(false){
+
     Route::get('/ui-alerts', function () {
         return view('ui-alerts');
     })->name('ui-alerts');
@@ -388,9 +394,7 @@ Route::middleware('auth')->group(function () {
         return view('file-manager');
     })->name('file-manager');
 
-    Route::get('/students', function () {
-        return view('students');
-    })->name('students');
+
 
     Route::get('/students-active', function () {
         return view('students-active');
@@ -961,100 +965,101 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete-account', function () {
         return view('delete-account');
     })->name('delete-account');
-    Route::get('/add-invoice', function () {
-        return view('add-invoice');
-    })->name('add-invoice');
-    Route::get('/add-staff', function () {
-        return view('add-staff');
-    })->name('add-staff');
-    Route::get('/appointments-calendar', function () {
-        return view('appointments-calendar');
-    })->name('appointments-calendar');
-    Route::get('/call-history', function () {
-        return view('call-history');
-    })->name('call-history');
-    Route::get('/edit-invoice', function () {
-        return view('edit-invoice');
-    })->name('edit-invoice');
-    Route::get('/edit-staff', function () {
-        return view('edit-staff');
-    })->name('edit-staff');
-    Route::get('/permission', function () {
-        return view('permission');
-    })->name('permission');
-    Route::get('/players', function () {
-        return view('players');
-    })->name('players');
-    Route::get('/reset-password', function () {
-        return view('reset-password');
-    })->name('reset-password');
-    Route::get('/reset-password-2', function () {
-        return view('reset-password-2');
-    })->name('reset-password-2');
-    Route::get('/reset-password-3', function () {
-        return view('reset-password-3');
-    })->name('reset-password-3');
-    Route::get('/reset-password-success', function () {
-        return view('reset-password-success');
-    })->name('reset-password-success');
-    Route::get('/reset-password-success-2', function () {
-        return view('reset-password-success-2');
-    })->name('reset-password-success-2');
-    Route::get('/reset-password-success-3', function () {
-        return view('reset-password-success-3');
-    })->name('reset-password-success-3');
-    Route::get('/staff-details', function () {
-        return view('staff-details');
-    })->name('staff-details');
-    Route::get('/staff-leaves', function () {
-        return view('staff-leaves');
-    })->name('staff-leaves');
-    Route::get('/staff-payroll', function () {
-        return view('staff-payroll');
-    })->name('staff-payroll');
-    Route::get('/staffs-attendance', function () {
-        return view('staffs-attendance');
-    })->name('staffs-attendance');
-    Route::get('/video-call', function () {
-        return view('video-call');
-    })->name('video-call');
-    Route::get('/pages', function () {
-        return view('pages');
-    })->name('pages');
-    Route::get('/contact-messages', function () {
-        return view('contact-messages');
-    })->name('contact-messages');
-    Route::get('/profile', function () {
-        return view('profile');
-    })->name('profile');
-    Route::get('/teacher-dashboard', function () {
-        return view('teacher-dashboard');
-    })->name('teacher-dashboard');
-    Route::get('/student-dashboard', function () {
-        return view('student-dashboard');
-    })->name('student-dashboard');
-    Route::get('/parent-dashboard', function () {
-        return view('parent-dashboard');
-    })->name('parent-dashboard');
-    Route::get('/activities', function () {
-        return view('activities');
-    })->name('activities');
-    Route::get('/layout-default', function () {
-        return view('layout-default');
-    })->name('layout-default');
-    Route::get('/layout-mini', function () {
-        return view('layout-mini');
-    })->name('layout-mini');
-    Route::get('/layout-box', function () {
-        return view('layout-box');
-    })->name('layout-box');
-    Route::get('/layout-dark', function () {
-        return view('layout-dark');
-    })->name('layout-dark');
-    Route::get('/invoice', function () {
-        return view('invoice');
-    })->name('invoice');
-    Route::get('/layout-rtl', function () {
-        return view('layout-rtl');
-    })->name('layout-rtl');
+        Route::get('/add-invoice', function () {
+            return view('add-invoice');
+        })->name('add-invoice');
+        Route::get('/add-staff', function () {
+            return view('add-staff');
+        })->name('add-staff');
+        Route::get('/appointments-calendar', function () {
+            return view('appointments-calendar');
+        })->name('appointments-calendar');
+        Route::get('/call-history', function () {
+            return view('call-history');
+        })->name('call-history');
+        Route::get('/edit-invoice', function () {
+            return view('edit-invoice');
+        })->name('edit-invoice');
+        Route::get('/edit-staff', function () {
+            return view('edit-staff');
+        })->name('edit-staff');
+        Route::get('/permission', function () {
+            return view('permission');
+        })->name('permission');
+        Route::get('/players', function () {
+            return view('players');
+        })->name('players');
+        Route::get('/reset-password', function () {
+            return view('reset-password');
+        })->name('reset-password');
+        Route::get('/reset-password-2', function () {
+            return view('reset-password-2');
+        })->name('reset-password-2');
+        Route::get('/reset-password-3', function () {
+            return view('reset-password-3');
+        })->name('reset-password-3');
+        Route::get('/reset-password-success', function () {
+            return view('reset-password-success');
+        })->name('reset-password-success');
+        Route::get('/reset-password-success-2', function () {
+            return view('reset-password-success-2');
+        })->name('reset-password-success-2');
+        Route::get('/reset-password-success-3', function () {
+            return view('reset-password-success-3');
+        })->name('reset-password-success-3');
+        Route::get('/staff-details', function () {
+            return view('staff-details');
+        })->name('staff-details');
+        Route::get('/staff-leaves', function () {
+            return view('staff-leaves');
+        })->name('staff-leaves');
+        Route::get('/staff-payroll', function () {
+            return view('staff-payroll');
+        })->name('staff-payroll');
+        Route::get('/staffs-attendance', function () {
+            return view('staffs-attendance');
+        })->name('staffs-attendance');
+        Route::get('/video-call', function () {
+            return view('video-call');
+        })->name('video-call');
+        Route::get('/pages', function () {
+            return view('pages');
+        })->name('pages');
+        Route::get('/contact-messages', function () {
+            return view('contact-messages');
+        })->name('contact-messages');
+        Route::get('/profile', function () {
+            return view('profile');
+        })->name('profile');
+        Route::get('/teacher-dashboard', function () {
+            return view('teacher-dashboard');
+        })->name('teacher-dashboard');
+        Route::get('/student-dashboard', function () {
+            return view('student-dashboard');
+        })->name('student-dashboard');
+        Route::get('/parent-dashboard', function () {
+            return view('parent-dashboard');
+        })->name('parent-dashboard');
+        Route::get('/activities', function () {
+            return view('activities');
+        })->name('activities');
+        Route::get('/layout-default', function () {
+            return view('layout-default');
+        })->name('layout-default');
+        Route::get('/layout-mini', function () {
+            return view('layout-mini');
+        })->name('layout-mini');
+        Route::get('/layout-box', function () {
+            return view('layout-box');
+        })->name('layout-box');
+        Route::get('/layout-dark', function () {
+            return view('layout-dark');
+        })->name('layout-dark');
+        Route::get('/invoice', function () {
+            return view('invoice');
+        })->name('invoice');
+        Route::get('/layout-rtl', function () {
+            return view('layout-rtl');
+        })->name('layout-rtl');
+    }
 });

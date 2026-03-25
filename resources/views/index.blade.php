@@ -20,7 +20,7 @@
 					</div>
 					<div class="d-flex my-xl-auto right-content align-items-center flex-wrap">
 						<div class="mb-2">
-							<a href="/add-student" class="btn btn-primary d-flex align-items-center me-3"><i
+							<a href="{{ url('students') }}" class="btn btn-primary d-flex align-items-center me-3"><i
 									class="ti ti-square-rounded-plus me-2"></i>Add New Student</a>
 						</div>
 												<div class="mb-2">
