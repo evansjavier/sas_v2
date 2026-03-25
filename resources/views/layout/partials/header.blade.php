@@ -114,14 +114,15 @@
                         <a href="javascript:void(0);" class="dropdown-toggle d-flex align-items-center"
                             data-bs-toggle="dropdown">
                             <span class="avatar avatar-md rounded">
-                                <img src="build/img/profiles/avatar-27.jpg" alt="Img" class="img-fluid">
+                                <img src="{{URL::asset('build/img/teachers/teacher-01.jpg')}}" alt="Img" class="img-fluid">
                             </span>
                         </a>
                         <div class="dropdown-menu">
                             <div class="d-block">
                                 <div class="d-flex align-items-center p-2">
                                     <span class="avatar avatar-md me-2 online avatar-rounded">
-                                        <img src="build/img/profiles/avatar-27.jpg" alt="img">
+                                        <img src="{{URL::asset('build/img/teachers/teacher-01.jpg')}}" alt="img">
+
                                     </span>
                                     <div>
                                         <h6 class="">{{ Auth::user()->name }}</h6>
