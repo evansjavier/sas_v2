@@ -140,7 +140,7 @@
                                         <div class="card-body">
                                                 <div class="bg-light-300 rounded-2 p-3 mb-3">
                                                         <div class="d-flex align-items-center">
-                                                                <a href="#" class="avatar avatar-lg flex-shrink-0"><img src="{{URL::asset('build/img/profile.png')}}" class="img-fluid rounded-circle" alt="img"></a>
+                                                                <a href="#" class="avatar avatar-lg flex-shrink-0"><img src="{{URL::asset('build/img/teachers/teacher-01.jpg')}}" class="img-fluid rounded-circle" alt="img"></a>
                                                                 <div class="ms-2">
                                                                 <h5 class="mb-0"><a href="#">{{ $instructor->name }}</a></h5>
                                                                 <p class="mb-0 text-muted">No courses assigned</p>
