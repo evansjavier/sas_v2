@@ -35,7 +35,7 @@
                                         <label for="defaultLayout">
                                             <span class="d-block mb-2 layout-img">
                                                 <img src="build/img/theme/default.svg" alt="img">
-                                            </span>                                     
+                                            </span>
                                             <span class="layout-type">Default</span>
                                         </label>
                                     </div>
@@ -46,7 +46,7 @@
                                         <label for="miniLayout">
                                             <span class="d-block mb-2 layout-img">
                                                 <img src="build/img/theme/mini.svg" alt="img">
-                                            </span>                                    
+                                            </span>
                                             <span class="layout-type">Mini</span>
                                         </label>
                                     </div>
@@ -57,7 +57,7 @@
                                         <label for="boxLayout">
                                             <span class="d-block mb-2 layout-img">
                                                 <img src="build/img/theme/box.svg" alt="img">
-                                            </span>                                    
+                                            </span>
                                             <span class="layout-type">Boxed</span>
                                         </label>
                                     </div>
@@ -66,7 +66,7 @@
                                     <a href="layout-rtl" class="theme-layout mb-3">
                                         <span class="d-block mb-2 layout-img">
                                             <img src="build/img/theme/rtl.svg" alt="img">
-                                        </span>                                    
+                                        </span>
                                         <span class="layout-type">RTL</span>
                                     </a>
                                 </div>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#modesetting" aria-expanded="true">
@@ -115,7 +115,7 @@
                                 <div class="col-6">
                                     <div class="theme-mode">
                                         <input type="radio" name="theme" id="lightTheme" value="light" checked>
-                                        <label for="lightTheme" class="p-2 rounded fw-medium w-100">                            
+                                        <label for="lightTheme" class="p-2 rounded fw-medium w-100">
                                             <span class="avatar avatar-md d-inline-flex rounded me-2"><i class="ti ti-sun-filled"></i></span>Light Mode
                                         </label>
                                     </div>
@@ -123,7 +123,7 @@
                                 <div class="col-6">
                                     <div class="theme-mode">
                                         <input type="radio" name="theme" id="darkTheme" value="dark" >
-                                        <label for="darkTheme" class="p-2 rounded fw-medium w-100">                         
+                                        <label for="darkTheme" class="p-2 rounded fw-medium w-100">
                                             <span class="avatar avatar-md d-inline-flex rounded me-2"><i class="ti ti-moon-filled"></i></span>Dark Mode
                                         </label>
                                     </div>
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarsetting" aria-expanded="true">
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                     </div>
-                </div>     
+                </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarbgsetting" aria-expanded="true">
@@ -218,7 +218,7 @@
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarcolor" aria-expanded="true">
@@ -251,12 +251,12 @@
                                 <div class="theme-colorsset me-3 mb-2">
                                     <input type="radio" name="color" id="redColor" value="red">
                                     <label for="redColor" class="red-clr"></label>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>  
-            </div>     
+                </div>
+            </div>
         </div>
         <div class="bg-light-500 p-3">
             <div class="row gx-3">
@@ -270,30 +270,30 @@
         </div>
         </div>
                 `
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        $(".main-wrapper").append(themesettings)
-    });
-    
+
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     $(".main-wrapper").append(themesettings)
+    // });
+
     document.addEventListener("DOMContentLoaded", function(event) {
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const lightModeToggle = document.getElementById('light-mode-toggle');
         const darkMode = localStorage.getItem('darkMode');
-    
-        function enableDarkMode() {  
+
+        function enableDarkMode() {
             document.documentElement.setAttribute('data-theme', 'dark');
             darkModeToggle.classList.remove('activate');
             lightModeToggle.classList.add('activate');
             localStorage.setItem('darkMode', 'enabled');
         }
-    
+
         function disableDarkMode() {
             document.documentElement.setAttribute('data-theme', 'light');
             lightModeToggle.classList.remove('activate');
             darkModeToggle.classList.add('activate');
             localStorage.removeItem('darkMode');
         }
-    
+
             // Check if darkModeToggle and lightModeToggle exist before adding event listeners
             if (darkModeToggle && lightModeToggle) {
             // Check the current mode on page load
@@ -302,7 +302,7 @@
             } else {
                 disableDarkMode();
             }
-    
+
             // Add event listeners
             darkModeToggle.addEventListener('click', enableDarkMode);
             lightModeToggle.addEventListener('click', disableDarkMode);
@@ -452,14 +452,6 @@
         }
 
     });
-    
-
-    
-
-
-
-
-    
 
 
 
@@ -468,5 +460,13 @@
 
 
 
-    
+
+
+
+
+
+
+
+
+
 
