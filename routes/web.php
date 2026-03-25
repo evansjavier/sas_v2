@@ -13,6 +13,9 @@ Route::middleware('auth')->group(function () {
     Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
     Route::get('index', [CustomAuthController::class, 'dashboard']);
 
+    // Admin routes
+    Route::resource('admin/instructors', \App\Http\Controllers\Admin\InstructorController::class);
+
     Route::get('/', function () {
         return view('index');
     })->name('index');

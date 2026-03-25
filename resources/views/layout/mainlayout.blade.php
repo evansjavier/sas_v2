@@ -106,9 +106,7 @@
 @endif
 
 @if (Route::is(['index','/','teacher-dashboard','student-dashboard','parent-dashboard']))
-<div id="global-loader">
-    <div class="page-loader"></div>
-</div>
+@include('layout.partials.aviation-loader')
 @endif
 <!-- Main Wrapper -->
 <div class="main-wrapper">

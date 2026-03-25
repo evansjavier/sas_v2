@@ -19,8 +19,8 @@
                                 <i class="ti ti-school"></i><span>Students</span>
                             </a>
                         </li>
-                        <li class="{{ Request::is('teacher-grid') ? 'active' : '' }}">
-                            <a href="{{ url('teacher-grid') }}">
+                        <li class="{{ Request::is('admin/instructors') || Request::is('admin/instructors/*') ? 'active' : '' }}">
+                            <a href="{{ url('admin/instructors') }}">
                                 <i class="ti ti-users"></i><span>Instructors</span>
                             </a>
                         </li>

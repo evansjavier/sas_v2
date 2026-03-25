@@ -35,7 +35,7 @@
         </div>
     </div>
     <!-- /Page Header -->
-    
+
 @endif
 
 @if (Route::is([
@@ -132,6 +132,7 @@
     'students',
     'teachers',
     'teacher-grid',
+    'instructors.index',
     'departments',
     'designation',
     'student-attendance',
@@ -164,7 +165,7 @@
     'cities',
     'testimonials',
     'faq'
-   
+
 ]))
 <!-- Page Header -->
 <div class="d-md-flex d-block align-items-center justify-content-between mb-3">
@@ -235,79 +236,79 @@
 								data-bs-target="#add_class_routine"><i
 									class="ti ti-square-rounded-plus-filled me-2"></i>Add
 								Class Routine</a>
-                 @endif 
-                 @if(Route::is(['class-section'])) 
+                 @endif
+                 @if(Route::is(['class-section']))
                  <a href="#" class="btn btn-primary" data-bs-toggle="modal"
 						data-bs-target="#add_class_section"><i
 							class="ti ti-square-rounded-plus-filled me-2"></i>Add
-						Section</a>   
-                @endif 
-                @if(Route::is(['class-subject']))  
+						Section</a>
+                @endif
+                @if(Route::is(['class-subject']))
                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_subject"><i
                     class="ti ti-square-rounded-plus-filled me-2"></i>Add
-                Subject</a>   
-                @endif   
-                @if(Route::is(['class-syllabus']))  
+                Subject</a>
+                @endif
+                @if(Route::is(['class-syllabus']))
                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_syllabus"><i
                         class="ti ti-square-rounded-plus-filled me-2"></i>Add Subject Group</a>
-                @endif 
+                @endif
                 @if(Route::is(['class-time-table']))
                 <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 								data-bs-target="#add_time_table"><i class="ti ti-square-rounded-plus me-2"></i>Add Time
 								Table</a>
-                 @endif 
-                 @if(Route::is(['class-home-work']))  
+                 @endif
+                 @if(Route::is(['class-home-work']))
                  <a href="#" class="btn btn-primary" data-bs-toggle="modal"
 								data-bs-target="#add_home_work"><i class="ti ti-square-rounded-plus-filled me-2"></i>Add
 								Home Work</a>
-               @endif 
-               @if(Route::is(['exam']))  
+               @endif
+               @if(Route::is(['exam']))
                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_exam"><i
                 class="ti ti-square-rounded-plus-filled me-2"></i>Add
             Exam</a>
-            @endif 
-            @if(Route::is(['exam-schedule']))  
+            @endif
+            @if(Route::is(['exam-schedule']))
             <a href="#" class="btn btn-primary" data-bs-toggle="modal"
 								data-bs-target="#add_exam_schedule"><i
 									class="ti ti-square-rounded-plus-filled me-2"></i>Add
 								Exam Schedule</a>
-            @endif 
-            @if(Route::is(['grade'])) 
+            @endif
+            @if(Route::is(['grade']))
             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_grade"><i
                 class="ti ti-square-rounded-plus-filled me-2"></i>Add
             Grade</a>
-            @endif 
-            @if(Route::is(['academic-reasons'])) 
+            @endif
+            @if(Route::is(['academic-reasons']))
             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_reason"><i
                 class="ti ti-square-rounded-plus-filled me-2"></i>Add Reasons</a>
-            @endif 
-            @if(Route::is(['fees-group'])) 
+            @endif
+            @if(Route::is(['fees-group']))
                 <a href="#" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#add_fees_group"><i
                     class="ti ti-square-rounded-plus me-2"></i>Add
                 Fees Group</a>
-             @endif  
-             @if(Route::is(['fees-type'])) 
+             @endif
+             @if(Route::is(['fees-type']))
              <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 								data-bs-target="#add_fees_Type"><i class="ti ti-square-rounded-plus-filled me-2"></i>Add
-								Fees Type</a> 
-             @endif  
-             @if(Route::is(['fees-master'])) 
+								Fees Type</a>
+             @endif
+             @if(Route::is(['fees-master']))
              <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 								data-bs-target="#add_fees_master"><i class="ti ti-square-rounded-plus me-2"></i>Add
 								Fees Master</a>
             @endif
-            @if(Route::is(['fees-assign']))  
+            @if(Route::is(['fees-assign']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 							data-bs-target="#add_fees_assign"><i class="ti ti-square-rounded-plus me-2"></i>Assign
-							New</a> 
+							New</a>
              @endif
-             @if(Route::is(['library-members'])) 
+             @if(Route::is(['library-members']))
              <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 								data-bs-target="#add_library_members"><i
 									class="ti ti-square-rounded-plus me-2"></i>Add member</a>
             @endif
-            @if(Route::is(['library-books'])) 
+            @if(Route::is(['library-books']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
             data-bs-target="#add_library_book"><i class="ti ti-square-rounded-plus me-2"></i>Add
             Book</a>
@@ -320,55 +321,58 @@
                 <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
                         data-bs-target="#add_players"><i class="ti ti-square-rounded-plus me-2"></i>Add
                         Player</a>
-             @endif   
+             @endif
              @if(Route::is(['hostel-list']))
              <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#add_hostel"><i
                 class="ti ti-square-rounded-plus me-2"></i>Add
-            Hostel</a>  
-            @endif 
+            Hostel</a>
+            @endif
             @if(Route::is(['hostel-rooms']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 							data-bs-target="#add_hostel_rooms"><i class="ti ti-square-rounded-plus me-2"></i>Add
-							Hostel Room</a>  
+							Hostel Room</a>
             @endif
             @if(Route::is(['hostel-room-type']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 						data-bs-target="#add_hostel_room_type"><i class="ti ti-square-rounded-plus me-2"></i>Add
-						Room Type</a> 
-           @endif   
+						Room Type</a>
+           @endif
            @if(Route::is(['transport-routes']))
            <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
-								data-bs-target="#add_routes"><i class="ti ti-square-rounded-plus me-2"></i>Add Route</a>  
-         @endif 
+								data-bs-target="#add_routes"><i class="ti ti-square-rounded-plus me-2"></i>Add Route</a>
+         @endif
          @if(Route::is(['transport-pickup-points']))
          <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#add_pickup"><i
-            class="ti ti-square-rounded-plus me-2"></i>Add Pickup Point</a>  
+            class="ti ti-square-rounded-plus me-2"></i>Add Pickup Point</a>
             @endif
-            @if(Route::is(['transport-vehicle-drivers']))  
+            @if(Route::is(['transport-vehicle-drivers']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
             data-bs-target="#add_driver"><i class="ti ti-square-rounded-plus me-2"></i>Add
-            Vehicle</a> 
+            Vehicle</a>
             @endif
-            @if(Route::is(['transport-vehicle']))  
+            @if(Route::is(['transport-vehicle']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 						data-bs-target="#add_vehicle"><i class="ti ti-square-rounded-plus me-2"></i>Add
-						Vehicle</a> 
-           @endif 
-           @if(Route::is(['transport-assign-vehicle'])) 
+						Vehicle</a>
+           @endif
+           @if(Route::is(['transport-assign-vehicle']))
            <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
 								data-bs-target="#add_assign_vehicle"><i
-									class="ti ti-square-rounded-plus-filled me-2"></i>Assign New Vehicle</a> 
-                                    
-            @endif 
-            @if(Route::is(['students'])) 
+									class="ti ti-square-rounded-plus-filled me-2"></i>Assign New Vehicle</a>
+
+            @endif
+            @if(Route::is(['students']))
             <a href="{{url('add-student')}}" class="btn btn-primary d-flex align-items-center"><i class="ti ti-square-rounded-plus me-2"></i>Add Student</a>
             @endif
             @if(Route::is(['teachers']))
-            <a href="{{url('add-teacher')}}" class="btn btn-primary d-flex align-items-center"><i class="ti ti-square-rounded-plus me-2"></i>Add Teacher</a> 
+            <a href="{{url('add-teacher')}}" class="btn btn-primary d-flex align-items-center"><i class="ti ti-square-rounded-plus me-2"></i>Add Teacher</a>
             @endif
             @if(Route::is(['teacher-grid']))
-            <a href="{{url('add-teacher')}}" class="btn btn-primary d-flex align-items-center" 
+            <a href="{{url('add-teacher')}}" class="btn btn-primary d-flex align-items-center"
 			><i class="ti ti-square-rounded-plus me-2"></i>Add Teacher</a>
+            @endif
+            @if(Route::is(['instructors.index']))
+            <a href="{{ route('instructors.create') }}" class="btn btn-primary d-flex align-items-center"><i class="ti ti-square-rounded-plus me-2"></i>Add Instructor</a>
             @endif
             @if(Route::is(['departments']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
@@ -403,7 +407,7 @@
             <a href="{{url('add-invoice')}}" class="btn btn-primary d-flex align-items-center"><i class="ti ti-square-rounded-plus me-2"></i>Add
                 Invoices</a>
             @endif
-           
+
             @if(Route::is(['roles-permission']))
             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
             data-bs-target="#add_role"><i class="ti ti-square-rounded-plus me-2"></i>Add Role</a>
@@ -413,44 +417,44 @@
             class="btn btn-primary d-flex align-items-center"><i
                 class="ti ti-square-rounded-plus me-2"></i>Add Membership</a>
                 @endif
-                @if(Route::is(['pages'])) 
+                @if(Route::is(['pages']))
                 <a href="#" class="btn btn-primary d-flex align-items-center"><i
                     class="ti ti-square-rounded-plus me-2"></i>Add Page</a>
                     @endif
-                    @if(Route::is(['blog-categories'])) 
+                    @if(Route::is(['blog-categories']))
                     <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
                             data-bs-target="#add_category"><i class="ti ti-square-rounded-plus me-2"></i>Add
                             Category</a>
                             @endif
-                            @if(Route::is(['blog-comments'])) 
+                            @if(Route::is(['blog-comments']))
                             <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#add_blog"><i
                                 class="ti ti-square-rounded-plus me-2"></i>Add Blog</a>
                                 @endif
-                                @if(Route::is(['blog-tags'])) 
+                                @if(Route::is(['blog-tags']))
                                 <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
                         data-bs-target="#add_tags"><i class="ti ti-square-rounded-plus me-2"></i>Add Tag</a>
                          @endif
-                         @if(Route::is(['countries'])) 
+                         @if(Route::is(['countries']))
                          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_country"><i
                             class="ti ti-square-rounded-plus-filled me-2"></i>Add
                         Country</a>
                         @endif
-                        @if(Route::is(['states'])) 
+                        @if(Route::is(['states']))
                         <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_state"><i
                             class="ti ti-square-rounded-plus-filled me-2"></i>Add State</a>
                   @endif
-                  @if(Route::is(['cities'])) 
+                  @if(Route::is(['cities']))
                   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_cities"><i
                     class="ti ti-square-rounded-plus-filled me-2"></i>Add
                 Cities</a>
                 @endif
-                @if(Route::is(['testimonials'])) 
+                @if(Route::is(['testimonials']))
                 <a href="#" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#add_testimonials"><i
                     class="ti ti-square-rounded-plus-filled me-2"></i>Add
                 Testimonials</a>
                 @endif
-                @if(Route::is(['faq'])) 
+                @if(Route::is(['faq']))
                 <a href="#" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal"
                 data-bs-target="#add_faq"><i class="ti ti-square-rounded-plus me-2"></i>Add FAQ</a>
                 @endif

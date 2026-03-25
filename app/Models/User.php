@@ -24,6 +24,15 @@ class User extends Authenticatable
         'license_number',
         'preferred_hub_id',
         'can_sparring',
+        'phone',
+        'gender',
+        'callsign',
+        'address',
+        'post_code',
+        'city',
+        'country_id',
+        'date_of_birth',
+        'place_of_birth',
     ];
 
     /**
@@ -46,6 +55,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'date_of_birth' => 'date',
         ];
     }
 
